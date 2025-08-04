@@ -37,6 +37,6 @@ git clone https://github.com/yourusername/cinematch.git
 cd cinematch
 npm install
 npm run dev
-
+```
 # Screenshot
 <img width="1919" height="1092" alt="image" src="https://github.com/user-attachments/assets/678afb72-c21e-4fa7-987e-2205afc8b429" />
