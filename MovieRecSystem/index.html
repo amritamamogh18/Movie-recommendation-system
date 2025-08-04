@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch - Movie Recommendations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-film"></i>
+        <h1>CineMatch</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search movies...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="user-menu">
+        <button class="btn-primary">Sign In</button>
+        <div class="user-avatar">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Filters -->
+      <section class="filters">
+        <div class="filter-section">
+          <h3>Genres</h3>
+          <div class="filter-tags">
+            <button class="filter-tag active">All</button>
+            <button class="filter-tag">Action</button>
+            <button class="filter-tag">Comedy</button>
+            <button class="filter-tag">Drama</button>
+            <button class="filter-tag">Sci-Fi</button>
+            <button class="filter-tag">Horror</button>
+            <button class="filter-tag">Romance</button>
+            <button class="filter-tag">Thriller</button>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Mood</h3>
+          <div class="mood-selector">
+            <div class="mood-option" data-mood="happy">
+              <i class="fas fa-laugh-beam"></i>
+              <span>Happy</span>
+            </div>
+            <div class="mood-option" data-mood="excited">
+              <i class="fas fa-bolt"></i>
+              <span>Excited</span>
+            </div>
+            <div class="mood-option active" data-mood="relaxed">
+              <i class="fas fa-couch"></i>
+              <span>Relaxed</span>
+            </div>
+            <div class="mood-option" data-mood="thoughtful">
+              <i class="fas fa-brain"></i>
+              <span>Thoughtful</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Year</h3>
+          <div class="year-slider">
+            <input type="range" min="1950" max="2023" value="2020" class="slider" id="yearRange">
+            <div class="year-labels">
+              <span>1950</span>
+              <span id="currentYear">2020</span>
+              <span>2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Rating</h3>
+          <div class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>+</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommendations -->
+      <section class="recommendations">
+        <div class="section-header">
+          <h2>Recommended For You</h2>
+          <div class="view-options">
+            <button class="view-btn active"><i class="fas fa-th-large"></i></button>
+            <button class="view-btn"><i class="fas fa-th-list"></i></button>
+          </div>
+        </div>
+
+        <div class="movie-grid">
+          <!-- Movie cards will be inserted here by JavaScript -->
+        </div>
+
+        <div class="load-more">
+          <button class="btn-secondary">Load More</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div class="modal" id="movieModal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+          <!-- Movie details will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
